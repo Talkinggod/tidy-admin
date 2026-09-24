@@ -16,6 +16,7 @@ Tidy Admin makes the WordPress admin easier to scan:
 
 * **Short plugin descriptions.** On the Plugins screen, each description is limited to two lines. Click "more" to read the rest.
 * **Short plugin names.** A long name with a marketing tagline, such as "Image Optimization - Optimize Images and Convert to WebP or AVIF", shows as "Image Optimization". Hover to see the full name. Names that would become identical (a family of add-ons, for example) are left in full.
+* **Alternating plugin rows.** WordPress colours every active plugin the same light blue, so a run of active plugins reads as one block. Tidy Admin alternates white and light blue row by row instead. Active plugins still show the blue bar on the left, a bold name and "Deactivate".
 * **A quieter byline.** The "Version | By | View details" line is one small grey line.
 * **Resizable columns.** Drag a column border on any admin list (Posts, Pages, Plugins, Users, Comments, orders and more). Your widths are remembered for each screen, in your own user profile, so they follow you to any browser. Double-click a border to reset that screen. Keyboard users can focus a border and use the arrow keys. On phone-sized screens WordPress's normal layout is kept.
 * **Quiet notices.** Upsells, "go Pro", "rate us" and other information notices are gathered behind a single "Notices (N)" button at the top of the screen. Click it to see them all. Click again to hide them.
@@ -34,6 +35,7 @@ These filters are available:
 
 * `tidy_admin_clamp_descriptions` (bool): return false to leave plugin descriptions full length.
 * `tidy_admin_short_names` (bool): return false to show plugin names in full.
+* `tidy_admin_stripe_plugins` (bool): return false to keep WordPress's own active/inactive row colours.
 * `tidy_admin_resize_columns` (bool): return false to turn off resizable columns.
 * `tidy_admin_tray_notices` (bool): return false to leave all notices in place.
 * `tidy_admin_keep_selectors` (string[]): CSS selectors for extra notices that must always stay visible.
@@ -68,4 +70,4 @@ Yes. It works on every admin screen, including the Network Admin.
 == Changelog ==
 
 = 1.0.0 =
-* First release: two-line plugin descriptions, short plugin names, a compact byline, resizable list-table columns, and a Notices button for routine admin notices.
+* First release: two-line plugin descriptions, short plugin names, alternating plugin rows, a compact byline, resizable list-table columns, and a Notices button for routine admin notices.

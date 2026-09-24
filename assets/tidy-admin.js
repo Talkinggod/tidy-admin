@@ -90,6 +90,29 @@
 		} );
 	}
 
+	/* Plugin rows: alternate by position, keeping update rows with their plugin. */
+	function stripePlugins() {
+		var list = document.querySelector( 'table.wp-list-table.plugins #the-list' );
+		if ( ! list ) {
+			return;
+		}
+		function stripe() {
+			var n = -1;
+			Array.prototype.forEach.call( list.children, function ( tr ) {
+				if ( ! tr.classList.contains( 'plugin-update-tr' ) ) {
+					n++;
+				}
+				tr.classList.add( 'tidy-admin-row' );
+				tr.classList.toggle( 'tidy-admin-alt', n % 2 === 1 );
+			} );
+		}
+		stripe();
+		// Rows come and go when plugins are updated or deleted in place.
+		if ( window.MutationObserver ) {
+			new MutationObserver( stripe ).observe( list, { childList: true } );
+		}
+	}
+
 	/* Notices: errors and warnings stay; the rest go behind one button. */
 	function trayNotices() {
 		var keep = ( cfg.keep || [] ).join( ',' );
@@ -317,6 +340,9 @@
 		}
 		if ( cfg.names !== false ) {
 			shortenNames();
+		}
+		if ( cfg.stripe !== false ) {
+			stripePlugins();
 		}
 		if ( cfg.resize !== false ) {
 			resizeColumns();

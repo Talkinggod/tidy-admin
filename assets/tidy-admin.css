@@ -37,6 +37,20 @@ table.plugins .plugin-title .row-actions {
 	display: none;
 }
 
+/*
+ * Plugin rows alternate white / light blue by position, so a run of active
+ * plugins no longer reads as one block. Active plugins keep core's left bar.
+ * An update-notice row takes the colour of the plugin row it belongs to.
+ */
+table.wp-list-table.plugins tr.tidy-admin-row > td,
+table.wp-list-table.plugins tr.tidy-admin-row > th {
+	background-color: #fff;
+}
+table.wp-list-table.plugins tr.tidy-admin-row.tidy-admin-alt > td,
+table.wp-list-table.plugins tr.tidy-admin-row.tidy-admin-alt > th {
+	background-color: rgba(var(--wp-admin-theme-color--rgb, 34, 113, 177), 0.08);
+}
+
 /* Version | By | View details: one small, muted line. */
 .plugins .plugin-version-author-uri {
 	font-size: 11px;

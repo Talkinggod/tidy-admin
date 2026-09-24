@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Tidy Admin
- * Description:       A calmer admin: short plugin names and descriptions, resizable list-table columns, and routine notices (upsells, "go Pro", "rate us") behind one Notices button. Errors and warnings always stay visible.
+ * Description:       A calmer admin: short plugin names and descriptions, alternating plugin rows, resizable list-table columns, and routine notices (upsells, "go Pro", "rate us") behind one Notices button. Errors and warnings always stay visible.
  * Version:           1.0.0
  * Requires at least: 5.8
  * Requires PHP:      7.4
@@ -100,6 +100,13 @@ function tidy_admin_enqueue() {
 			 * @param bool $short Default true.
 			 */
 			'names'   => (bool) apply_filters( 'tidy_admin_short_names', true ),
+
+			/**
+			 * Filters whether Plugins screen rows alternate white / light blue.
+			 *
+			 * @param bool $stripe Default true.
+			 */
+			'stripe'  => (bool) apply_filters( 'tidy_admin_stripe_plugins', true ),
 
 			/**
 			 * Filters whether routine notices are gathered behind the Notices button.
