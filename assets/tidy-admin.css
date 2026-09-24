@@ -1,0 +1,115 @@
+/* Tidy Admin */
+
+/* Plugin descriptions: two lines, expandable. */
+.plugins .plugin-description .tidy-admin-desc {
+	display: -webkit-box;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+}
+.plugins .plugin-description .tidy-admin-desc.is-open {
+	display: block;
+	-webkit-line-clamp: unset;
+	line-clamp: unset;
+}
+.plugins .plugin-description .tidy-admin-desc p {
+	margin: 0 0 .4em;
+}
+/* Plugin names: the name column keeps a sensible share; long names stay tidy. */
+.plugins thead .column-name,
+.plugins tfoot .column-name {
+	width: 24%;
+}
+table.plugins .plugin-title strong {
+	display: -webkit-box;
+	white-space: normal;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	-webkit-box-orient: vertical;
+	overflow: hidden;
+	overflow-wrap: anywhere;
+}
+table.plugins .plugin-title .row-actions {
+	white-space: normal;
+}
+.plugins .tidy-admin-tagline {
+	display: none;
+}
+
+/* Version | By | View details: one small, muted line. */
+.plugins .plugin-version-author-uri {
+	font-size: 11px;
+	line-height: 1.5;
+	color: #646970;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	contain: inline-size; /* Never let this line widen the table. */
+}
+.plugins .tidy-admin-toggle {
+	font-size: 12px;
+	text-decoration: none;
+}
+
+/* Routine notices wait in the tray until asked for. */
+.tidy-admin-held .tidy-admin-notice {
+	display: none !important;
+}
+#tidy-admin-tray {
+	margin: 10px 20px 0 2px;
+}
+#tidy-admin-tray .button {
+	font-size: 12px;
+}
+
+/* Adjustable columns. */
+.wp-list-table thead th.tidy-admin-resizable,
+.wp-list-table tfoot th.tidy-admin-resizable {
+	position: relative;
+}
+.tidy-admin-grip {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 9px;
+	cursor: col-resize;
+	z-index: 2;
+	touch-action: none;
+}
+.tidy-admin-grip.is-right { right: -5px; }
+.tidy-admin-grip.is-left { left: -5px; }
+.tidy-admin-grip::after {
+	content: "";
+	position: absolute;
+	top: 20%;
+	bottom: 20%;
+	left: 4px;
+	width: 1px;
+	background: #c3c4c7;
+	opacity: 0;
+	transition: opacity .15s;
+}
+.wp-list-table thead tr:hover .tidy-admin-grip::after,
+.tidy-admin-grip:focus::after,
+.tidy-admin-resizing .tidy-admin-grip::after {
+	opacity: 1;
+}
+.tidy-admin-grip:hover::after,
+.tidy-admin-grip:focus::after,
+.tidy-admin-grip.is-active::after {
+	background: #2271b1;
+	width: 3px;
+	left: 3px;
+}
+.tidy-admin-grip:focus {
+	outline: none;
+}
+.tidy-admin-resizing,
+.tidy-admin-resizing * {
+	cursor: col-resize !important;
+	user-select: none !important;
+}
+@media screen and (max-width: 782px) {
+	.tidy-admin-grip { display: none; }
+}
