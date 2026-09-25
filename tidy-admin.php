@@ -2,13 +2,15 @@
 /**
  * Plugin Name:       Tidy Admin
  * Description:       A calmer admin: short plugin names and descriptions, alternating plugin rows, resizable list-table columns, and routine notices (upsells, "go Pro", "rate us") behind one Notices button. Errors and warnings always stay visible.
- * Version:           1.0.0
+ * Version:           1.02
  * Requires at least: 5.8
  * Requires PHP:      7.4
- * Author:            Talkinggod Labs
+ * Author:            Talkinggod Labs — Níímą́ą́ʼ Bee Naalkaah
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       tidy-admin
+ *
+ * Talkinggod Labs — Níímą́ą́ʼ Bee Naalkaah
  *
  * @package TidyAdmin
  */
@@ -17,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'TIDY_ADMIN_VERSION', '1.0.0' );
+define( 'TIDY_ADMIN_VERSION', '1.02' );
 define( 'TIDY_ADMIN_META', 'tidy_admin_widths' );
 
 /**

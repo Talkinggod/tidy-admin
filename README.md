@@ -1,6 +1,6 @@
 # Tidy Admin
 
-A small WordPress plugin by **Talkinggod Labs** that cleans up the admin screens.
+A small WordPress plugin by **Talkinggod Labs** — *Níímą́ą́ʼ Bee Naalkaah* — that cleans up the admin screens.
 
 - **Short plugin descriptions.** On the Plugins screen, each description is limited to two lines, with a "more" link.
 - **Short plugin names.** "Image Optimization - Optimize Images and Convert to WebP or AVIF" shows as "Image Optimization" (full name on hover). Names that would collide are left in full.

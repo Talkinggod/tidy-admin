@@ -4,7 +4,7 @@ Tags: admin, notices, columns, plugins, clean
 Requires at least: 5.8
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.02
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -69,5 +69,5 @@ Yes. It works on every admin screen, including the Network Admin.
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.02 =
 * First release: two-line plugin descriptions, short plugin names, alternating plugin rows, a compact byline, resizable list-table columns, and a Notices button for routine admin notices.
