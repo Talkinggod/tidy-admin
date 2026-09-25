@@ -1,3 +1,5 @@
+![Tidy Admin by Talkinggod Labs](.wordpress-org/banner-1544x500.png)
+
 # Tidy Admin
 
 A small WordPress plugin by **Talkinggod Labs** — *Níímą́ą́ʼ Bee Naalkaah* — that cleans up the admin screens.

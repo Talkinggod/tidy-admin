@@ -4,3 +4,4 @@
 .distignore
 README.md
 .DS_Store
+.wordpress-org
